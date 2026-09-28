@@ -1,0 +1,455 @@
+﻿/* General Reset */
+
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f5f3ee;
+    color: #333;
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Left Side: Image & Branding */
+.left-panel {
+    flex: 1;
+    background: url('/Images/backgroundImg.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column; /* stack h1 and p vertically */
+    justify-content: center; /* center vertically */
+    align-items: center; /* center horizontally */
+    padding: 40px;
+    color: white;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+}
+
+    .left-panel h1 {
+        font-size: 5vw; /* scales with screen width */
+        text-align: center;
+        margin: 0; /* remove default margins */
+    }
+    @media (max-width: 768px) {
+    .left-panel h1 {
+        font-size: 3rem; /* smaller on tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .left-panel h1 {
+        font-size: 2rem; /* smaller on phones */
+    }
+}
+
+    .left-panel p {
+        font-size: 1.2rem;
+        text-align: center;
+        max-width: 100%;
+        word-wrap: break-word;
+    }
+
+/* Right Side: Navigation */
+.right-panel {
+    flex: 1;
+    background-color: #2e4f3e;
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.nav-button {
+    background-color: transparent;
+    border: 2px solid #c2d6c2;
+    color: #c2d6c2;
+    padding: 15px 20px;
+    margin: 10px 0;
+    font-size: 1.1rem;
+    text-align: center;
+    align-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    .nav-button:hover {
+        background-color: #c2d6c2;
+        color: #2e4f3e;
+    }
+.home-nav-button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-bottom: 4px solid #2e4f3e;
+    display: inline-block;
+    transition: opacity 0.3s;
+    text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    .left-panel, .right-panel 
+    {
+        flex: none;
+        width: 100%;
+        height: 50vh;
+
+    }
+
+    .right-panel 
+    {
+        padding: 30px 20px;
+    }
+}
+.address-label {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    box-sizing: border-box;
+}
+#col1 {
+    width: 41%;
+    padding-right:1%;
+    float: left;
+}
+
+#col2 {
+    width: 49%;
+    /*padding-left:1%; */
+    float: left;
+}
+.auto-style1 {
+    text-align: center;
+}
+
+.address-box {
+    text-align: center;
+}
+/* Grid Container Setup */
+.news-grid-container {
+    padding: 40px;
+    background-color: #f5f3ee; /* Light background for contrast */
+}
+
+.news-events-grid {
+    display: grid;
+    /* Two columns on desktop/tablet */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px; /* Space between items */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Mobile Responsiveness: Stack columns vertically */
+@media (max-width: 768px) {
+    .news-events-grid {
+        grid-template-columns: 1fr; /* Single column on mobile */
+    }
+}
+
+/* Individual Item Styling */
+.grid-item {
+    background-color: white; /* White card background */
+    border: 1px solid #c2d6c2; /* Pale green border */
+    border-radius: 8px;
+    overflow: hidden; /* Ensures image respects border-radius */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.item-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.item-content {
+    padding: 20px;
+    color: #333;
+}
+
+.item-category {
+    font-size: 0.9rem;
+    color: #2e4f3e; /* Dark Green for category/date */
+    margin-bottom: 5px;
+}
+
+.item-content h3 {
+    color: #2e4f3e;
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.summary-text {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+/* Form Container */
+.contact-form-wrapper {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #f5f3ee; /* Off-white background */
+    border: 1px solid #c2d6c2; /* Pale green border */
+    border-radius: 8px;
+    color: #333;
+}
+
+/* Grouping for labels and inputs */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Styling for all TextBoxes */
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensures padding doesn't affect total width */
+    font-size: 1rem;
+}
+
+/* Submit Button Style */
+.submit-button {
+    border-style: none;
+    border-color: inherit;
+    border-width: medium;
+    background-color: #2e4f3e; /* Dark Green */
+    color: white;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+    .submit-button:hover {
+        background-color: #3b604e; /* Slightly lighter on hover */
+    }
+
+/* Error Messages */
+.validator-error {
+    color: #cc0000; /* Red for errors */
+    font-size: 0.9rem;
+    display: block;
+    margin-top: 5px;
+}
+
+/* Confirmation Message */
+.confirmation-message {
+    color: #2e4f3e;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* Ensures the two main content columns sit side-by-side */
+.two-column-content-wrapper {
+    display: flex; /* ACTIVATES THE SIDE-BY-SIDE LAYOUT */
+    width: 100%;
+    flex-grow: 1;
+}
+
+/* STICKY HEADER WRAPPER (Top two banners) */
+.sticky-header-wrapper {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* The main branding banner (Top Sticky Element) */
+.left-panel.top-branding-banner {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    height: 200px; /* Adjust height as needed */
+    flex: none;
+}
+
+/* The 'Deluxe Pods' Title Bar (Second Sticky Element) */
+.pod-detail-title-banner {
+    color: #c2d6c2;
+    text-align: center;
+    background: #2E4F3E;
+    padding: 15px 0;
+    font-size: large;
+    width: 100%;
+    position: sticky;
+    top: 200px; /* Must be the height of the .top-branding-banner */
+    z-index: 9;
+}
+
+/* Address box styling (Assuming this is a navigation bar at the very top) */
+.address-box {
+    text-align: center;
+    background: #2E4F3E;
+    width: 100%;
+    padding: 5px 0;
+}
+
+
+/* ----------------------------------------------------- */
+/* 2. COLUMN & CAROUSEL STYLES */
+/* ----------------------------------------------------- */
+
+/* LEFT COLUMN: CAROUSEL */
+#col1 {
+    flex: 1; /* Takes 50% width, or as allocated by flex */
+    background-color: #f5f3ee;
+    padding: 20px;
+}
+
+/* RIGHT COLUMN: TEXT */
+#col2 {
+    flex: 1; /* Takes 50% width, or as allocated by flex */
+    background-color: #2e4f3e;
+    color: white;
+    padding: 30px;
+    line-height: 1.6;
+}
+
+/* Carousel Reset to fit the column perfectly */
+.container {
+    max-width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    height: auto;
+}
+
+.carousel-inner, .carousel-inner > .item, .carousel-inner > .item > img {
+    width: 100%;
+    height: auto;
+    max-height: 600px; /* Prevents images from getting too tall */
+    object-fit: cover;
+}
+
+/* Text in right panel */
+#col2 h1 {
+    color: #c2d6c2;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.auto-style1 {
+    font-size: medium;
+}
+
+.availability-calendar {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+    .availability-calendar th, .availability-calendar td {
+        padding: 10px;
+        border: 1px solid #ccc;
+        text-align: center;
+        cursor: pointer;
+        font-size: 1rem;
+        height: 40px;
+    }
+
+
+.available {
+    background-color: #e6ffe6; /* Light green */
+    color: #2e4f3e; /* Dark green text */
+}
+
+    .available:hover {
+        background-color: #c2d6c2; /* Sage hover */
+    }
+
+
+.booked {
+    background-color: #ffcccc; /* Light red */
+    color: #660000;
+    cursor: default;
+    text-decoration: line-through;
+}
+
+
+.selected {
+    background-color: #2e4f3e !important; /* Dark green fill */
+    color: white;
+    font-weight: bold;
+    border: 2px solid #c2d6c2;
+}
+.auto-style1 {
+    text-align: center;
+}
+
+.address-box {
+    text-align: center;
+}
+/* Grid Container Setup */
+.news-grid-container {
+    padding: 40px;
+    background-color: #f5f3ee; /* Light background for contrast */
+}
+
+.news-events-grid {
+    display: grid;
+    /* Two columns on desktop/tablet */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px; /* Space between items */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Mobile Responsiveness: Stack columns vertically */
+@media (max-width: 768px) {
+    .news-events-grid {
+        grid-template-columns: 1fr; /* Single column on mobile */
+    }
+}
+
+/* Individual Item Styling */
+.grid-item {
+    background-color: white; /* White card background */
+    border: 1px solid #c2d6c2; /* Pale green border */
+    border-radius: 8px;
+    overflow: hidden; /* Ensures image respects border-radius */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.item-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.item-content {
+    padding: 20px;
+    color: #333;
+}
+
+.item-category {
+    font-size: 0.9rem;
+    color: #2e4f3e; /* Dark Green for category/date */
+    margin-bottom: 5px;
+}
+
+.item-content h3 {
+    color: #2e4f3e;
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.summary-text {
+    font-size: 1rem;
+    line-height: 1.5;
+}

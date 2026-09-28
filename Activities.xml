@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<activites>
+	<activity>
+		<name>Guided Nature Walking</name>
+		<description> Explore the forest trails with our experiences guides.</description>
+		<price>£15 </price>
+		<timeOfDay>Afternoon </timeOfDay>
+		<slot>14:00 - 15:30</slot>
+	</activity>
+	<activity>
+		<name>Kayaking</name>
+		<description>Enjoy a peaceful paddle across the scenic lake.</description>
+		<price>£25 </price>
+		<timeOfDay>Morning </timeOfDay>
+		<slot>10:00 - 11:30</slot>
+	</activity>
+	<activity>
+		<name>Outdoor Yoga</name>
+		<description>Morning Yoga surrounded by fresh air and forest sounds.</description>
+		<price>£10 </price>
+		<timeOfDay>Morning </timeOfDay>
+		<slot>07:30 - 8:30</slot>
+	</activity>
+	<activity>
+		<name>Campfire Storytelling</name>
+		<description>Evening gathering with stories, music, and marshmallows.</description>
+		<price>£8 </price>
+		<slot>20:00 - 21:30</slot>
+		<timeOfDay>Evening </timeOfDay>
+	</activity>
+	<activity>
+		<name>Wildlife Photography Workshop</name>
+		<description>Learn tips from local photographers to capture nature's beauty.</description>
+		<price>£30 </price>
+		<timeOfDay>Midday </timeOfDay>
+		<slot>11:00 - 13:00
+		</slot>
+	</activity>
+
+</activites>
